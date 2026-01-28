@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RKE Consulting | Defence, Innovation & AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 40px 0 30px;
+            text-align: center;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .header-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            border: 3px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .header-text {
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1em;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+        
+        section {
+            padding: 35px 0;
+        }
+        
+        h2 {
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #1e3a5f;
+            text-align: center;
+        }
+        
+        .intro {
+            background: #f8f9fa;
+            border-left: 4px solid #2c5282;
+            padding: 20px 30px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .service-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: #2c5282;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .service-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .expertise {
+            background: #f8f9fa;
+        }
+        
+        .expertise-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .expertise-item {
+            background: white;
+            padding: 15px 20px;
+            border-left: 3px solid #2c5282;
+            font-size: 0.95em;
+            color: #444;
+        }
+        
+        .experience {
+            text-align: center;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: 300;
+            color: #2c5282;
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.95em;
+            color: #666;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .qualifications {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-top: 20px;
+        }
+        
+        .qualifications ul {
+            list-style: none;
+            line-height: 2;
+        }
+        
+        .qualifications li:before {
+            content: "→ ";
+            color: #2c5282;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .cta h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255,255,255,0.5);
+            transition: border-color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            border-color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .tagline {
+                font-size: 1.1em;
+            }
+            
+            section {
+                padding: 25px 0;
+            }
+            
+            .stats {
+                gap: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-photo">
+                    Photo
+                </div>
+                <div class="header-text">
+                    <h1>RKE Consulting</h1>
+                    <p class="tagline">Defence · Innovation · Artificial Intelligence</p>
+                    <p class="subtitle">Strategic consultancy with over 30 years of expertise</p>
+                    <p style="margin-top: 20px; font-size: 1.1em;">
+                        <a href="mailto:richard.ellis@rkeconsulting.co.uk" style="color: white; text-decoration: none; border-bottom: 2px solid rgba(255,255,255,0.5); transition: border-color 0.2s;">richard.ellis@rkeconsulting.co.uk</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="intro">
+                RKE Consulting provides high-value consultancy services to defence and government organisations, combining deep technical expertise with strategic insight. Founded by Richard Ellis MSc, the consultancy brings decades of experience in artificial intelligence, command and control systems, capability acquisition, and defence innovation.
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise">
+        <div class="container">
+            <h2>Areas of Expertise</h2>
+            <div class="expertise-list">
+                <div class="expertise-item">Artificial Intelligence & Machine Learning</div>
+                <div class="expertise-item">Military Command & Control (C2/C4IS)</div>
+                <div class="expertise-item">Defence Capability Acquisition</div>
+                <div class="expertise-item">Strategy & Policy Development</div>
+                <div class="expertise-item">Requirements Management</div>
+                <div class="expertise-item">Information Systems Architecture</div>
+                <div class="expertise-item">Research & Development</div>
+                <div class="expertise-item">Business Change Management</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Consultancy Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>AI & Technology</h3>
+                    <p>Practical application of artificial intelligence and machine learning to defence challenges, including research into AI for command and control operations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Strategic Advisory</h3>
+                    <p>Policy, strategy and vision development for defence organisations, with particular focus on innovation and emerging technologies.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Capability Development</h3>
+                    <p>Requirements elicitation and management, acquisition support, and technical specification development for complex defence systems.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Organisational Assessment</h3>
+                    <p>Development and application of maturity models for headquarters and operational units, including observation and analysis of exercises.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Independent Review</h3>
+                    <p>Expert assessment of projects, architectures and programmes across defence and government sectors.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Research Leadership</h3>
+                    <p>Management and conduct of research projects, including collaboration with academia and participation in the UK AI community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="container">
+            <h2>Experience & Credentials</h2>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">DV</span>
+                    <span class="stat-label">Security Cleared</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">MSc</span>
+                    <span class="stat-label">Intelligent Systems</span>
+                </div>
+            </div>
+            
+            <div class="qualifications">
+                <h3 style="color: #2c5282; margin-bottom: 20px;">Qualifications & Background</h3>
+                <ul>
+                    <li>MSc Intelligent Systems, Brunel University (AI & Neural Networks)</li>
+                    <li>BSc (First Class Honours), Electrical Engineering, Royal Naval Engineering College</li>
+                    <li>Former Royal Navy Weapon Engineer Officer (Lieutenant Commander)</li>
+                    <li>Member of IET and BCS professional organisations</li>
+                    <li>Published researcher in AI and military acquisition policy</li>
+                    <li>Active participant in UK artificial intelligence community</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Let's Discuss Your Requirements</h2>
+            <p>Expert consultancy for defence, innovation and AI challenges</p>
+            <div class="contact-info">
+                <a href="mailto:richard.ellis@rkeconsulting.co.uk">richard.ellis@rkeconsulting.co.uk</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RKE Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
